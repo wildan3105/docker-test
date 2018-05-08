@@ -1,6 +1,7 @@
-FROM busybox:ubuntu-14.04
+FROM php:7.0-cli
 
-RUN echo "#!/bin/sh\n" > /test.sh
-RUN echo "echo \"this is version 3\"" >> /test.sh
+COP . /usr/src/myapp
 
-ENTRYPOINT ["sh", "/test.sh"]
+WORKDIR /usr/src/myapp
+
+CMD ["php", "./print.php"]
