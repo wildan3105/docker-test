@@ -1,6 +1,6 @@
 FROM php:7.0-cli
 
-COP . /usr/src/myapp
+COPY . /usr/src/myapp
 
 WORKDIR /usr/src/myapp
 
