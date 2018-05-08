@@ -1,4 +1,5 @@
 <?php
 	$name = 'Wildan S. Nahar';
-	echo $name;
+	$age = 15;
+	echo $name . ", age : " . $age;
 ?>
