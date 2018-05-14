@@ -1,5 +1,4 @@
 <?php
-	$name = 'Wildan S. Nahar';
-	$age = 15;
-	echo $name . ", age : " . $age;
+	$mysql = new mysqli("localhost", "root");
+	echo "MySQL server info : " . $mysql->host_info;
 ?>
