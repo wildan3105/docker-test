@@ -1,7 +1,11 @@
-FROM php:7.0-cli
+FROM tutum/lamp:latest
 
-COPY . /usr/src/myapp
+RUN rm -rf /app && git clone https://github.com/wildan3105/docker-test.git /app
 
-WORKDIR /usr/src/myapp
+ADD run.sh 
 
-CMD ["php", "./print.php"]
+RUN chmod +x run.sh
+
+EXPOSE 80 3306
+
+CMD ["/run.sh"]
